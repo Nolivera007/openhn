@@ -21,6 +21,8 @@ devtools::install_github("Nolivera007/openhn")
 ## Ver la documentación
 
 ``` r
+library(openhn)
+
 ?openhn
 ?pib_produccion
 ```
