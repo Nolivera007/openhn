@@ -18,7 +18,7 @@ Puedes instalar `openhn` desde Github con:
 devtools::install_github("Nolivera007/openhn")
 ```
 
-# Ver la documentación
+## Ver la documentación
 
 ``` r
 ?openhn
