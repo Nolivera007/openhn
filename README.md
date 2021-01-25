@@ -14,8 +14,15 @@ obtenidos de las principales instituciones económicas del país y de organismos
 Puedes instalar `openhn` desde Github con:
 
 ``` r
-library(devtools)
-install_github("Nolivera007/openhn")
+# install.packages("devtools")
+devtools::install_github("Nolivera007/openhn")
+```
+
+# Ver la documentación
+
+``` r
+?openhn
+?pib_produccion
 ```
 
 ## Ejemplo
