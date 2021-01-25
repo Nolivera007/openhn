@@ -2,8 +2,12 @@ Package: openhn
 Type: Package
 Title: Datos económicos y sociales de Honduras.
 Version: 0.1.0
-Author@R: c(person("Noé", "Olivera", email = "nolivera007@gmail.com",
-  role = c("aut", "cre"))
+Author:
+  person( given = "Noé",
+          family = "Olivera",
+          email = "nolivera007@gmail.com",
+          role = c("aut", "cre"),
+          comment = c(nolivera007 = "https://twitter.com/nolivera007")
 Maintainer: Noé Olivera <nolivera007@gmail.com>
 Description: Conjunto de datos económicos y sociales de Honduras los cuales son
     obtenidos de las principales instituciones económicas del país y de organismos internacionales.
@@ -15,3 +19,14 @@ Depends:
     R (>= 2.10)
 URL: https://github.com/Nolivera007
 RoxygenNote: 7.1.1
+Imports: 
+    tibble
+Suggests: 
+    knitr,
+    rmarkdown,
+    dplyr,
+    readr,
+    tidyr,
+    stringr,
+    ggplot2
+VignetteBuilder: knitr

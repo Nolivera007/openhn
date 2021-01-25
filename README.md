@@ -1,25 +1,51 @@
 
-# openhn
+# `openhn`
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of openhn is to ...
+Paquete R de datos económicos y sociales de Honduras los cuales son
+obtenidos de las principales instituciones económicas del país y de organismos internacionales. Ordenados en formato Tidy. Este paquete contiene:
 
-## Installation
+* `pib_produccion` : PIB trimestral por enfoque de actividad económica.
 
-You can install the released version of openhn from [CRAN](https://CRAN.R-project.org) with:
+## Instalación
+
+Puedes instalar `openhn` desde Github con:
 
 ``` r
-install.packages("openhn")
+library(devtools)
+install_github("Nolivera007/openhn")
 ```
 
-## Example
+## Ejemplo
 
-This is a basic example which shows you how to solve a common problem:
+Algunos ejemplos de gráficos simples:
 
 ``` r
 library(openhn)
-## basic example code
+library(dplyr)
+library(ggplot2)
+library(forcats)
+
+data("pib_produccion")
+
+# 1: Producción total de cada actividad económica
+
+pib_produccion %>%
+  group_by(año, actividad_economica) %>%
+  summarise(produccion_anual = sum(hnl)) %>%
+  ggplot(aes(año, produccion_anual, group = actividad_economica)) +
+  geom_line() +
+  facet_wrap(.~ actividad_economica)
+  
+# 2: Distribución de la producción
+
+pib_produccion %>%
+  group_by(año, actividad_economica) %>%
+  summarise(produccion_anual = sum(hnl)) %>%
+  ggplot(aes(actividad_economica, produccion_anual, group = actividad_economica)) +
+  geom_boxplot() +
+  coord_flip()
 ```
 

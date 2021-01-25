@@ -5,10 +5,14 @@
 #'
 #' Este paquete contiene una serie de datos económicos y sociales
 #' de Honduras.
-#' @seealso \code{\link{pib_produccion}}
-#'
 #' @docType package
 #' @name openhn
-#' @importFrom tibble
 #'
+
+
+# The following block is used by usethis to automatically manage
+# roxygen namespace tags. Modify with care!
+## usethis namespace: start
+#' @importFrom tibble tibble
+## usethis namespace: end
 NULL

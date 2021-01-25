@@ -9,22 +9,23 @@ Un objeto de la clase \code{"data.frame"}
 }
 \source{
 Banco Central de Honduras (BCH)
+\url{https://www.bch.hn/index.php}
 }
 \usage{
 data(pib_produccion)
 }
 \description{
-PIB trimestral del año 2000 al 2020 en valores
+PIB trimestral del año 2000-2020 en valores
 constantes. Datos del Banco Central de Honduras (BCH).
-Incluye las 15 actividades económicas ordenados en formato **Tidy** y `id` para
+Incluye las 15 actividades económicas ordenados en formato Tidy y id para
 facilitar los cálculos.
 }
 \details{
 \itemize{
-\item `id`: número del 1 al 15.
-\item `actividad_economica`: Concepto.
-\item `trimestre`: Trimestre.
-\item `hnl`: Millones de Lempiras.
+\item id: número del 1 al 15.
+\item actividad_economica: Concepto.
+\item trimestre: Trimestre.
+\item hnl: Millones de Lempiras.
 }
 }
 \keyword{datasets}
