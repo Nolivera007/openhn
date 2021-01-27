@@ -21,9 +21,11 @@ devtools::install_github("Nolivera007/openhn")
 library(openhn)
 ```
 
-# Ver la documentación
+## Ver la documentación
 
 ``` r
+library(openhn)
+
 ?openhn
 ?produccion
 ?departamento
