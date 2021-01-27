@@ -1,5 +1,5 @@
 ---
-title: "pib_produccion"
+title: "produccion"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{pib_produccion}

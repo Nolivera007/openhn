@@ -78,7 +78,7 @@ length(año) == nrow(pib_trim_tidy)
 
 # Agregamos la columna año, eliminamos el total y renombramos las
 
-pib_produccion <- tibble(
+produccion <- tibble(
   pib_trim_tidy,
   año
 ) %>%
@@ -86,7 +86,7 @@ pib_produccion <- tibble(
     id, actividad_economica, año, trimestre, hnl
   )
 
-pib_produccion %>%
+produccion %>%
   group_by(id, actividad_economica) %>%
   summarise(n = n())
 
@@ -95,4 +95,4 @@ glimpse(pib_trim_tidy)
 
 # LISTO, ya tenemos la base de datos.
 
-usethis::use_data(pib_produccion, overwrite = TRUE)
+usethis::use_data(produccion, overwrite = TRUE)

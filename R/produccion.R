@@ -14,7 +14,7 @@
 #'
 #' @docType data
 #'
-#' @usage data(pib_produccion)
+#' @usage data(produccion)
 #'
 #' @format Un objeto de la clase \code{"data.frame"}
 #'
@@ -29,16 +29,16 @@
 #' library(ggplot2)
 #' library(forcats)
 #'
-#' data(pib_produccion)
+#' data(produccion)
 #'
-#' pib_produccion %>%
+#' produccion %>%
 #'  group_by(año, actividad_economica) %>%
 #'   summarise(produccion_anual = sum(hnl)) %>%
 #'   ggplot(aes(año, produccion_anual, group = actividad_economica)) +
 #'   geom_line() +
 #'   facet_wrap(.~ actividad_economica)
 #'
-#' pib_produccion %>%
+#' produccion %>%
 #'  group_by(año, actividad_economica) %>%
 #'   summarise(produccion_anual = sum(hnl)) %>%
 #'   ggplot(aes(actividad_economica, produccion_anual, group = actividad_economica)) +
@@ -46,4 +46,4 @@
 #'   coord_flip()
 #'
 #'
-"pib_produccion"
+"produccion"
