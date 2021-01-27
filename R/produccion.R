@@ -2,7 +2,7 @@
 #'
 #' PIB trimestral del año 2000-2020 en valores
 #' constantes. Datos del Banco Central de Honduras (BCH).
-#' Incluye las 15 actividades económicas ordenados en formato Tidy y id para
+#' Incluye las actividades económicas ordenados en formato Tidy e id para
 #' facilitar los cálculos.
 #'
 #' \itemize{
@@ -23,27 +23,8 @@
 #' @source Banco Central de Honduras (BCH)
 #' \url{https://www.bch.hn/index.php}
 #'
-#' @example
-#' library(openhn)
-#' library(dplyr)
-#' library(ggplot2)
-#' library(forcats)
-#'
+#' @examples
 #' data(produccion)
-#'
-#' produccion %>%
-#'  group_by(año, actividad_economica) %>%
-#'   summarise(produccion_anual = sum(hnl)) %>%
-#'   ggplot(aes(año, produccion_anual, group = actividad_economica)) +
-#'   geom_line() +
-#'   facet_wrap(.~ actividad_economica)
-#'
-#' produccion %>%
-#'  group_by(año, actividad_economica) %>%
-#'   summarise(produccion_anual = sum(hnl)) %>%
-#'   ggplot(aes(actividad_economica, produccion_anual, group = actividad_economica)) +
-#'   geom_boxplot() +
-#'   coord_flip()
-#'
+#' head(produccion)
 #'
 "produccion"

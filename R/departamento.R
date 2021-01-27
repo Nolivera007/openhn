@@ -1,5 +1,10 @@
 #' Población, homicidios y tasa de homicidios.
 #'
+#' Población, homicidios y tasa de homicidios por 100,000
+#' habitantes en los 18 departamentos de Honduras en 2019.
+#' Datos del Instituto Nacional de Estadísticas de Honduras y
+#' el Sistema Estadistico Policial en Linea.
+#'
 #'
 #' \itemize{
 #' \item departamento: 18 departamentos de Honduras.
@@ -17,20 +22,23 @@
 #' @keywords datasets
 #'
 #' @source Instituto Nacional de Estadísticas de Honduras (INE)
-#' \url{}
+#' \url{https://www.ine.gob.hn/V3/}
+#'
+#' @source Sistema Estadistico Policial en Linea (SEPOL)
+#' \url{https://www.sepol.hn/}
 #'
 #' @examples
-#' Cálcule la media, la media recortada y la mediana de la población
+#' 1. Cálcule la media y la mediana de la población.
 #'
 #' library(dplyr)
 #' library(openhn)
 #'
 #' data(departamento)
+#' head(departamento)
 #'
 #' departamento %>%
 #' summarise(
 #'  media = mean(poblacion),
-#'  media_recortada = mean(poblacion, trim = 0.1),
 #'  mediana = median(poblacion)
 #' )
 #'

@@ -15,8 +15,10 @@ obtenidos de las principales instituciones económicas del país y de organismos
 Puedes instalar `openhn` desde Github con:
 
 ``` r
-# install.packages("devtools")
+install.packages("devtools")
 devtools::install_github("Nolivera007/openhn")
+
+library(openhn)
 ```
 
 # Ver la documentación
@@ -29,17 +31,15 @@ devtools::install_github("Nolivera007/openhn")
 
 ## Ejemplo
 
-Algunos ejemplos de gráficos simples:
-
-``` r
+```{r}
 library(openhn)
 library(dplyr)
 library(ggplot2)
-library(forcats)
+```
 
-data("produccion")
-
-# 1: Producción total de cada actividad económica
+Producción total de cada actividad económica.
+```{r}
+data(produccion)
 
 produccion %>%
   group_by(año, actividad_economica) %>%
@@ -47,14 +47,16 @@ produccion %>%
   ggplot(aes(año, produccion_anual, group = actividad_economica)) +
   geom_line() +
   facet_wrap(.~ actividad_economica)
-  
-# 2: Distribución de la producción
-
-produccion %>%
-  group_by(año, actividad_economica) %>%
-  summarise(produccion_anual = sum(hnl)) %>%
-  ggplot(aes(actividad_economica, produccion_anual, group = actividad_economica)) +
-  geom_boxplot() +
-  coord_flip()
 ```
 
+Cálcular la media, la media recortada y la mediana de la población
+```{r}
+data(departamento)
+
+departamento %>%
+  summarise(
+    media = mean(poblacion),
+    media_recortada = mean(poblacion, trim = 0.1),
+    mediana = median(poblacion)
+)
+```

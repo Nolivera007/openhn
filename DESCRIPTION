@@ -10,14 +10,14 @@ Author:
           comment = c(nolivera007 = "https://twitter.com/nolivera007")
 Maintainer: Noé Olivera <nolivera007@gmail.com>
 Description: Conjunto de datos económicos y sociales de Honduras los cuales son
-    obtenidos de las principales instituciones económicas del país y de organismos internacionales.
+    obtenidos de las principales instituciones económicas y sociales del país y de organismos internacionales.
     Ordenados en formato Tidy.
-License: What license is it under?
+License: Artistic-2.0
 Encoding: UTF-8
 LazyData: true
 Depends: 
     R (>= 2.10)
-URL: https://github.com/Nolivera007
+URL: https://github.com/Nolivera007/openhn
 RoxygenNote: 7.1.1
 Imports: 
     tibble

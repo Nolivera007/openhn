@@ -6,5 +6,5 @@
 \title{Datos económicos y sociales de Honduras.}
 \description{
 Este paquete contiene una serie de datos económicos y sociales
-de Honduras.
+de Honduras estruturados en formato Tidy.
 }

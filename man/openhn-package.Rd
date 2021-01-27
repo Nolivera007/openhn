@@ -7,13 +7,13 @@
 \title{openhn: Datos económicos y sociales de Honduras.}
 \description{
 Conjunto de datos económicos y sociales de Honduras los cuales son
-    obtenidos de las principales instituciones económicas del país y de organismos internacionales.
+    obtenidos de las principales instituciones económicas y sociales del país y de organismos internacionales.
     Ordenados en formato Tidy.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/Nolivera007}
+  \item \url{https://github.com/Nolivera007/openhn}
 }
 
 }

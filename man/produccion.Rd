@@ -17,7 +17,7 @@ data(produccion)
 \description{
 PIB trimestral del año 2000-2020 en valores
 constantes. Datos del Banco Central de Honduras (BCH).
-Incluye las 15 actividades económicas ordenados en formato Tidy y id para
+Incluye las actividades económicas ordenados en formato Tidy e id para
 facilitar los cálculos.
 }
 \details{
@@ -27,5 +27,10 @@ facilitar los cálculos.
 \item trimestre: Trimestre.
 \item hnl: Millones de Lempiras.
 }
+}
+\examples{
+data(produccion)
+head(produccion)
+
 }
 \keyword{datasets}
