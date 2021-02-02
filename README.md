@@ -7,7 +7,7 @@
 <!-- badges: end -->
 
 El objetivo del paquete `openhn` es facilitar el uso de R a estudiantes,
-investigadores, analistas y cualquier persona interesada proporcionado
+investigadores, analistas y cualquier persona interesada proporcionando
 datos socioeconómicos de Honduras a nivel departamental y municipal.
 
 El paquete `openhn` contiene:
@@ -29,16 +29,16 @@ El paquete `openhn` contiene:
 -   `map_departamental`: Datos proporcionados por la Iniciativa de Datos
     Abiertos del Gobierno de Honduras que proporciona información de los
     limites administrativos de los departamento de Honduras. (Fuente:
-    [https://datos.gob.hn/](Gobierno%20de%20Honduras))
+    [Gobierno de Honduras](https://datos.gob.hn/))
 
 -   `map_municipal`: Datos proporcionados por la Iniciativa de Datos
     Abiertos del Gobierno de Honduras que proporciona información de los
-    limites administrativos municipales de Honduras. (Fuente:
-    [https://datos.gob.hn/](Gobierno%20de%20Honduras))
+    limites administrativos municipales de Honduras. (Fuente: [Gobierno
+    de Honduras](https://datos.gob.hn/))
 
 ### Instalación
 
-Puede instalar la versión de desarrollo desde
+Puedes instalar la versión en desarrollo desde
 [GitHub](https://github.com/) con:
 
 ``` r
@@ -55,6 +55,8 @@ library(openhn)
 ?produccion
 ?departamento
 ```
+
+## Ejemplos
 
 ### produccion
 
