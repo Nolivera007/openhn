@@ -21,17 +21,22 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-El objetivo del paquete openhn es proporcionar a investigadores, analistas y cualquier persona interesa en datos socioeconómicos de Honduras a nivel departamental y municipal.
+El objetivo del paquete `openhn` es facilitar el uso de R a estudiantes, investigadores, analistas y cualquier persona interesada proporcionando datos socioeconómicos de Honduras a nivel departamental y municipal.
 
-El paquete openhn contiene:
+El paquete `openhn` contiene:
 
 * `produccion`: Datos proporcionados por el Banco Central de Honduras (BCH) que incluye la producción (millones de lempiras) de las actividades económicas trimestral en valores constantes. Los datos estan en formato [Tidy](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html). (Fuente: [BCH](https://www.bch.hn/))
-* `departamento`: Datos proporcioandos por el Instituto Nacional de Estadística Honduras (INE) y el Sistema Estadistico Policial en Linea (SEPOL) que incluye la población, homicidios y tasa de homicidios por 100,000 habitantes en los 18 departamentos de Honduras en 2019. (Fuente: [INE](https://www.ine.gob.hn/V3/), [SEPOL](https://www.sepol.hn/)).
+
+* `departamento`: Datos proporcioandos por el Instituto Nacional de Estadística Honduras (INE) y el Sistema Estadistico Policial en Linea (SEPOL) que incluye la población, homicidios y tasa de homicidios por 100,000 habitantes en los 18 departamentos de Honduras en 2019. (Fuente: [INE](https://www.ine.gob.hn/V3/), [SEPOL](https://www.sepol.hn/))
+
+* `map_departamental`: Datos proporcionados por la Iniciativa de Datos Abiertos del Gobierno de Honduras que proporciona información de los limites administrativos de los departamento de Honduras. (Fuente: [Gobierno de Honduras](https://datos.gob.hn/))
+
+* `map_municipal`: Datos proporcionados por la Iniciativa de Datos Abiertos del Gobierno de Honduras que proporciona información de los limites administrativos municipales de Honduras. (Fuente: [Gobierno de Honduras](https://datos.gob.hn/))
 
 
 ### Instalación
 
-Puede instalar la versión de desarrollo desde [GitHub](https://github.com/) con:
+Puedes instalar la versión en desarrollo desde [GitHub](https://github.com/) con:
 
 ``` r
 # install.packages("devtools")
@@ -48,6 +53,7 @@ library(openhn)
 ?departamento
 ```
 
+## Ejemplos
 
 ### produccion
 
@@ -63,7 +69,6 @@ produccion %>%
   summarise(produccion_anual = sum(hnl))
 ```
 
-
 ### departamento
 
 Cálcular la media, la media recortada y la mediana de la población.
@@ -77,5 +82,26 @@ departamento %>%
     media_recortada = mean(poblacion, trim = 0.1),
     mediana = median(poblacion)
 )
+```
+
+### map_departamental
+
+```{r}
+# install.packages("sf", dependencies = TRUE)
+data(map_departamental)
+
+map_departamental %>% 
+  ggplot() +
+  geom_sf()
+```
+
+### map_municipal
+
+```{r}
+data(map_municipal)
+
+map_municipal %>% 
+  ggplot() +
+  geom_sf()
 ```
 

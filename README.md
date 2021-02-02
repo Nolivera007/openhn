@@ -6,24 +6,35 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-El objetivo del paquete openhn es proporcionar a investigadores,
-analistas y cualquier persona interesa en datos socioeconómicos de
-Honduras a nivel departamental y municipal.
+El objetivo del paquete `openhn` es facilitar el uso de R a estudiantes,
+investigadores, analistas y cualquier persona interesada proporcionado
+datos socioeconómicos de Honduras a nivel departamental y municipal.
 
-El paquete openhn contiene:
+El paquete `openhn` contiene:
 
 -   `produccion`: Datos proporcionados por el Banco Central de Honduras
     (BCH) que incluye la producción (millones de lempiras) de las
     actividades económicas trimestral en valores constantes. Los datos
     estan en formato
-    [Tidy](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)
+    [Tidy](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html).
     (Fuente: [BCH](https://www.bch.hn/))
+
 -   `departamento`: Datos proporcioandos por el Instituto Nacional de
     Estadística Honduras (INE) y el Sistema Estadistico Policial en
     Linea (SEPOL) que incluye la población, homicidios y tasa de
     homicidios por 100,000 habitantes en los 18 departamentos de
     Honduras en 2019. (Fuente: [INE](https://www.ine.gob.hn/V3/),
-    [SEPOL](https://www.sepol.hn/)).
+    [SEPOL](https://www.sepol.hn/))
+
+-   `map_departamental`: Datos proporcionados por la Iniciativa de Datos
+    Abiertos del Gobierno de Honduras que proporciona información de los
+    limites administrativos de los departamento de Honduras. (Fuente:
+    [https://datos.gob.hn/](Gobierno%20de%20Honduras))
+
+-   `map_municipal`: Datos proporcionados por la Iniciativa de Datos
+    Abiertos del Gobierno de Honduras que proporciona información de los
+    limites administrativos municipales de Honduras. (Fuente:
+    [https://datos.gob.hn/](Gobierno%20de%20Honduras))
 
 ### Instalación
 
@@ -92,3 +103,28 @@ departamento %>%
 #>     <dbl>           <dbl>   <dbl>
 #> 1 508797.         458327. 434870.
 ```
+
+### map\_departamental
+
+``` r
+# install.packages("sf", dependencies = TRUE)
+data(map_departamental)
+
+map_departamental %>% 
+  ggplot() +
+  geom_sf()
+```
+
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+
+### map\_municipal
+
+``` r
+data(map_municipal)
+
+map_municipal %>% 
+  ggplot() +
+  geom_sf()
+```
+
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
