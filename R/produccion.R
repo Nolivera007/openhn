@@ -1,9 +1,8 @@
-#' Producto Interno Bruto (PIB) por enfoque de actividad económica.
+#' Producción por actividad económica.
 #'
-#' PIB trimestral del año 2000-2020 en valores
-#' constantes. Datos del Banco Central de Honduras (BCH).
-#' Incluye las actividades económicas ordenados en formato Tidy e id para
-#' facilitar los cálculos.
+#' Datos proporcionados por el Banco Central de Honduras (BCH) que incluye
+#' la producción (millones de lempiras)
+#' de las actividades económicas trimestral en valores constantes.
 #'
 #' \itemize{
 #' \item id: número del 1 al 15.
@@ -16,12 +15,12 @@
 #'
 #' @usage data(produccion)
 #'
-#' @format Un objeto de la clase \code{"data.frame"}
+#' @format Un objeto de la clase \code{data.frame}
 #'
 #' @keywords datasets
 #'
-#' @source Banco Central de Honduras (BCH)
-#' \url{https://www.bch.hn/index.php}
+#' @source
+#' \href{https://www.bch.hn/}{Banco Central de Honduras (BCH)}
 #'
 #' @examples
 #' data(produccion)

@@ -1,15 +1,14 @@
 #' Población, homicidios y tasa de homicidios.
 #'
-#' Población, homicidios y tasa de homicidios por 100,000
-#' habitantes en los 18 departamentos de Honduras en 2019.
-#' Datos del Instituto Nacional de Estadísticas de Honduras y
-#' el Sistema Estadistico Policial en Linea.
+#' Datos proporcioandos por el Instituto Nacional de Estadística Honduras (INE) y
+#' el Sistema Estadistico Policial en Linea (SEPOL) que incluye la población, homicidios y
+#' tasa de homicidios por 100,000 habitantes en los 18 departamentos de Honduras en 2019.
 #'
 #'
 #' \itemize{
-#' \item departamento: 18 departamentos de Honduras.
+#' \item departamento: Nombre del departamento.
 #' \item poblacion: Población.
-#' \item homicidios: Total de homcidios.
+#' \item homicidios: Total de homicidios.
 #' \item tasa_homicidios: Tasa de homicidios por 100,000 habitantes.
 #' }
 #'
@@ -17,29 +16,17 @@
 #'
 #' @usage data(departamento)
 #'
-#' @format Un objeto de la clase \code{"data.frame"}
+#' @format Un objeto de la clase \code{data.frame}
 #'
 #' @keywords datasets
 #'
-#' @source Instituto Nacional de Estadísticas de Honduras (INE)
-#' \url{https://www.ine.gob.hn/V3/}
+#' @source
+#' \href{https://www.ine.gob.hn/V3/}{Instituto Nacional de Estadísticas de Honduras (INE)}
 #'
-#' @source Sistema Estadistico Policial en Linea (SEPOL)
-#' \url{https://www.sepol.hn/}
+#' \href{https://www.sepol.hn/}{Sistema Estadistico Policial en Linea (SEPOL)}
 #'
 #' @examples
-#' 1. Cálcule la media y la mediana de la población.
-#'
-#' library(dplyr)
-#' library(openhn)
-#'
 #' data(departamento)
 #' head(departamento)
-#'
-#' departamento %>%
-#' summarise(
-#'  media = mean(poblacion),
-#'  mediana = median(poblacion)
-#' )
 #'
 "departamento"

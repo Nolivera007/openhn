@@ -1,6 +1,6 @@
 Package: openhn
 Type: Package
-Title: Datos económicos y sociales de Honduras.
+Title: Datos económicos y sociales de Honduras de fuentes públicas.
 Version: 0.1.0
 Author:
   person( given = "Noé",
@@ -9,10 +9,8 @@ Author:
           role = c("aut", "cre"),
           comment = c(nolivera007 = "https://twitter.com/nolivera007")
 Maintainer: Noé Olivera <nolivera007@gmail.com>
-Description: Conjunto de datos económicos y sociales de Honduras los cuales son
-    obtenidos de las principales instituciones económicas y sociales del país y de organismos internacionales.
-    Ordenados en formato Tidy.
-License: Artistic-2.0
+Description: El objetivo del paquete openhn es proporcionar a investigadores, analistas y cualquier persona interesa en datos socioeconómicos de Honduras a nivel departamental y municipal.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: 
